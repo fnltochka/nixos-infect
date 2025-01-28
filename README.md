@@ -53,7 +53,7 @@ The original motivation for `nixos-infect` is that existing solutions—like `ni
 4. Run something like:
    ```bash
    curl https://raw.githubusercontent.com/fnltochka/nixos-infect/master/nixos-infect \
-     | NIX_CHANNEL=nixos-23.05 bash -x
+     | NIX_CHANNEL=nixos-24.11 bash -x
    ```
    You can specify a different `NIX_CHANNEL`, e.g. `nixos-24.11`.
 
@@ -76,7 +76,7 @@ You can use [DigitalOcean user data](https://docs.digitalocean.com/products/drop
 #cloud-config
 
 runcmd:
-  - curl https://raw.githubusercontent.com/fnltochka/nixos-infect/master/nixos-infect | PROVIDER=digitalocean NIX_CHANNEL=nixos-23.05 bash 2>&1 | tee /tmp/infect.log
+  - curl https://raw.githubusercontent.com/fnltochka/nixos-infect/master/nixos-infect | PROVIDER=digitalocean NIX_CHANNEL=nixos-24.11 bash 2>&1 | tee /tmp/infect.log
 ```
 
 <details>
@@ -99,7 +99,7 @@ runcmd:
 ```yaml
 #cloud-config
 runcmd:
-  - curl https://raw.githubusercontent.com/fnltochka/nixos-infect/master/nixos-infect | PROVIDER=hetznercloud NIX_CHANNEL=nixos-23.05 bash 2>&1 | tee /tmp/infect.log
+  - curl https://raw.githubusercontent.com/fnltochka/nixos-infect/master/nixos-infect | PROVIDER=hetznercloud NIX_CHANNEL=nixos-24.11 bash 2>&1 | tee /tmp/infect.log
 ```
 
 <details>
